@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/rootContainer"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#B0E7EF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/windowBackground"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Appointment Request"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Spinner
+            android:id="@+id/servicesname"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/producrnameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Products Name"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/AddressInputInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Address"
+                android:inputType="text" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT DATE"
+                    android:id="@+id/btn_date"
+                    android:textColor="#fff"
+                    android:background="@color/windowBackground"
+                    android:layout_alignBottom="@+id/in_date"
+                    android:layout_toRightOf="@+id/in_date"
+                    android:layout_toEndOf="@+id/in_date" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/in_date"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT TIME"
+                    android:id="@+id/btn_time"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/windowBackground"
+                    android:layout_below="@+id/btn_date"
+                    android:layout_alignLeft="@+id/btn_date"
+                    android:layout_alignStart="@+id/btn_date" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/in_time"
+                    android:layout_below="@+id/in_date"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/booked"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_marginBottom="20dp"
+            android:background="@color/windowBackground"
+            android:text="Booked Request"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:onClick="onClickBooked"
+            android:layout_marginTop="160dp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
